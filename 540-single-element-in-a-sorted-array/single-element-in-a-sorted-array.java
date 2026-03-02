@@ -22,7 +22,7 @@ class Solution {
             if(leftcount%2==0){
                 low=se+1;
             }
-            else high=se-1;
+            else high=f-1;
         }
       return 1;  
     }
