@@ -15,8 +15,9 @@ class Solution {
         for(int i=0;i<n-1;i++){
             int leftMax=prefixMax[i];
             int rightMax=suffixMax[i];
+            if(height[i]<leftMax && height[i]<rightMax){
             total=total+Math.min(leftMax,rightMax)-height[i];
-
+            }
         }
         return total;
     }
