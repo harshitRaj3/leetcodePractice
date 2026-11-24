@@ -23,12 +23,16 @@ class Solution {
         
     }
      public int gcd(int a,int b){
-        while(b!=0){
-            int rem=a % b;
-            a=b;
-            b=rem;
+        while(a>0 && b>0){
+            if(a>b) a=a % b;
+            else{
+               b=b%a;
+            
+            }
+        
         }
-        return a;
+        if(a==0) return b;
+        else return a;
      }
     
 }
